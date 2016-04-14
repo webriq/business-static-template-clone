@@ -52,22 +52,35 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
               - {label: "Name", name: "name", widget: "string"}
-  - name: "services" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Services"  # Used in the UI, ie.: "New Post"
-    folder: "services" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Banner", name: "banner", widget: "image", class: "image featured"}
-      - {label: "Short Description", name: "shortdesc", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      # - name: "listservices"
-      #   label: "List Services"
-      #   widget: "list"
-      #   fields:
-      #     - {label: "Icon", name: "icon", widget: "string"}
-      #     - {label: "Name", name: "subtitle", widget: "string"}
-      #     - {label: "Tagline", name: "tagline", widget: "string"}
+  - name: "listservices"
+    label: "Services"
+    files:
+      - name: "listservices"
+        label: "Services"
+        file: "data/characters.json"
+        description: "image slider"
+        fields:
+          - label: "List of Services"
+            name: "listservices"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Tagline", name: "tagline", widget: "string"}
+      - name: "services" # Used in routes, ie.: /admin/collections/:slug/edit
+        label: "Services"  # Used in the UI, ie.: "New Post"
+        folder: "services" # The path to the folder where the documents are stored
+        create: false # Allow users to create new documents in this collection
+        fields: # The fields each document in this collection have
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Banner", name: "banner", widget: "image", class: "image featured"}
+          - {label: "Short Description", name: "shortdesc", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          # - name: "listservices"
+          #   label: "List Services"
+          #   widget: "list"
+          #   fields:
+          #     {label: "Icon", name: "icon", widget: "string"}
+          #     {label: "Name", name: "name", widget: "string"}
   - name: "work" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Featured Work"  # Used in the UI, ie.: "New Post"
     folder: "featuredwork" # The path to the folder where the documents are stored

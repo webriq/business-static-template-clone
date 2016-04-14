@@ -6,6 +6,8 @@ listservices:
   - icon: fa-paw
     subtitle: asdfasdf
     tagline: asdfaaaaaaaaaaaaaaaaaaaa
+icon: TEST
+name: TEADFASDF
 cmsUserSlug: our-services
 date: now
 ---

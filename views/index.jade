@@ -5,7 +5,7 @@ block append content
 
 	section#service.main-section.scrollspy
 		.container
-			each service in services.sort('title')
+			each service in services.sort('asc')
 				h2= service.title
 				h6= service.shortdesc
 
