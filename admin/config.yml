@@ -7,6 +7,7 @@ production:
     name: webriq-api
     repo: owner/repo # Path to your Github repository
     branch: master # Branch to update (master by default)
+    endpoint: https://staging.app.webriq.com/api/
 
 media_folder: "assets/img/uploads" # Folder where user uploaded files should go
 public_folder: "assets"
